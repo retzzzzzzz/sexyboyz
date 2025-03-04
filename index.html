@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Droga, são eles de novo? </title>
+    <link rel="icon" href="iconzito.png" type="image/png">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body, h2, a, span, div {
+            user-select: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+        }
+        img {
+            pointer-events: none;
+            user-drag: none;
+            -webkit-user-drag: none;
+        }
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+    </style>
+    <script>
+        let titulo = " Droga, são eles de novo? ";
+        let posicao = 0;
+
+        function animarTitulo() {
+            document.title = titulo.substring(posicao) + titulo.substring(0, posicao);
+            posicao++;
+            if (posicao > titulo.length) posicao = 0;
+            setTimeout(animarTitulo, 200);
+        }
+
+        window.onload = function() {
+            animarTitulo();
+        }
+    </script>
+</head>
+<body>
+    <div id="particles-js"></div>
+    <video autoplay loop muted id="bg-video">
+        <source src="arquivo.mp4" type="video/mp4">
+        Seu navegador não suporta o elemento de vídeo.
+    </video>
+
+    <input type="checkbox" autocomplete="off" id="overlay-toggle">
+    <div class="overlay fullscreen">
+        <label for="overlay-toggle" onclick="audioPlay();">
+            <span class="overlayno-hover hover" style="font-family: monospace; font-size: 0.6em;"></span>
+            <span class="overlayhover hover" style="font-family: monospace; font-size: 0.6em;">nã★ aperte aqui</span>
+        </label>
+    </div>
+
+    <audio loop preload="auto" id="audio">
+        <source src="audio.mp3" type="audio/mpeg">
+    </audio>
+
+    <div class="cards-container">
+        <div class="profile-card">
+            <div class="banner"><img src="" alt="Banner"></div>
+            <div class="avatar-container"><img class="avatar" src="" alt="Avatar"></div>
+            <div class="profile-info">
+                <h2 class="username"></h2>
+                <div class="badges"></div>
+                <a href="https://www.instagram.com/retzz.wtf/" target="_blank" class="instagram-button">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="profile-card">
+            <div class="banner"><img src="" alt="Banner"></div>
+            <div class="avatar-container"><img class="avatar" src="" alt="Avatar"></div>
+            <div class="profile-info">
+                <h2 class="username"></h2>
+                <div class="badges"></div>
+                <a href="https://www.instagram.com/amigo/" target="_blank" class="instagram-button">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function audioPlay() {
+            var audio = document.getElementById("audio");
+            audio.volume = 1.0;
+            audio.currentTime = 0;
+            audio.play();
+        }
+
+        document.addEventListener('contextmenu', function (e) {
+            e.preventDefault(); // Bloqueia clique com o botão direito
+        });
+
+        document.addEventListener('keydown', function (e) {
+            if (e.ctrlKey && (e.key === 'u' || e.key === 'U')) {
+                e.preventDefault(); // Bloqueia Ctrl + U
+            }
+            if (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'i')) {
+                e.preventDefault(); // Bloqueia Ctrl + Shift + I
+            }
+            if (e.key === 'F12') {
+                e.preventDefault(); // Bloqueia F12
+            }
+            if (e.ctrlKey && (e.key === 's' || e.key === 'S')) {
+                e.preventDefault(); // Bloqueia Ctrl + S
+            }
+        });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
