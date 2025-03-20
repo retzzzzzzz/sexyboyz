@@ -119,19 +119,30 @@ body {
     pointer-events: none;
 }
 
-.instagram-button {
-    display: inline-block;
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
     margin-top: 15px;
+}
+
+.social-button {
     font-size: 30px;
     color: #ffffffd5;
     transition: color 0.3s ease, transform 0.2s ease;
     text-decoration: none;
-    user-select: none;
+}
+
+.social-button:hover {
+    transform: scale(1.2);
+}
+
+.instagram-button {
+    color: #e1306c;
 }
 
 .instagram-button:hover {
-    color: #ff0000;
-    transform: scale(1.2);
+    color: #e1306c;
 }
 
 .twitter-button {
