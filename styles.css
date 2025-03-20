@@ -134,6 +134,14 @@ body {
     transform: scale(1.2);
 }
 
+.twitter-button {
+    color: #1da1f2;
+}
+
+.twitter-button:hover {
+    color: #1da1f2;
+}
+
 /* Responsividade para mobile */
 @media (max-width: 768px) {
     .profile-card {
