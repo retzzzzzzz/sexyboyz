@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const profilesData = [
         {
             username: "d5n",
-            avatar: "danzin.jpeg",
+            avatar: "danzin.png",
             banner: "bannerzin1.jpeg",
             badges: ["badge1.png", "badge2.png", "badge4.png", "badge5.png"]
         },
