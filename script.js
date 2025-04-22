@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
         {
             username: "d5n",
             avatar: "danzin.png",
-            banner: "bannerzin1.jpg",
+            banner: "bannerd.gif",
             badges: ["badge1.png", "badge2.png", "badge4.png", "badge5.png"]
         },
         {
