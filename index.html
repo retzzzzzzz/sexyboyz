@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title> juju and dandan </title>
+  <link rel="icon" href="iconzito.png" type="image/png"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="styles.css"/>
+  <style>
+    body, h2, a, span, div {
+      user-select: none;
+    }
+    img {
+      pointer-events: none;
+      user-drag: none;
+    }
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+  </style>
+  <script>
+    let titulo = " GhostBoy ";
+    let posicao = 0;
+    function animarTitulo() {
+      document.title = titulo.substring(posicao) + titulo.substring(0, posicao);
+      posicao++;
+      if (posicao > titulo.length) posicao = 0;
+      setTimeout(animarTitulo, 200);
+    }
+    window.onload = function () {
+      animarTitulo();
+    };
+  </script>
+</head>
+<body>
+  <div id="particles-js"></div>
+
+  <video autoplay loop muted id="bg-video">
+    <source src="arquivo.mp4" type="video/mp4"/>
+    Seu navegador não suporta o elemento de vídeo.
+  </video>
+
+  <input type="checkbox" autocomplete="off" id="overlay-toggle"/>
+  <div class="overlay fullscreen">
+    <label for="overlay-toggle" onclick="audioPlay();">
+      <span class="overlayno-hover hover" style="font-family: monospace; font-size: 0.6em;"></span>
+      <span class="overlayhover hover" style="font-family: monospace; font-size: 0.6em;">dreams★</span>
+    </label>
+  </div>
+
+  <audio loop preload="auto" id="audio">
+    <source src="audio.mp3" type="audio/mpeg"/>
+  </audio>
+
+  <!-- CONTAINER CORRETO COM OS DOIS PERFIS DENTRO -->
+  <div class="cards-container">
+    <!-- Perfil 1: d5n -->
+    <div class="profile-card">
+      <div class="banner"><img src="" alt="Banner"/></div>
+      <div class="avatar-container"><img class="avatar" src="" alt="Avatar"/></div>
+      <div class="profile-info">
+        <h2 class="username"></h2>
+        <div class="badges"></div>
+        <div class="social-links">
+          <a href="https://www.instagram.com/retzz.wtf/" target="_blank" class="social-button instagram-button">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://twitter.com/eoretzz" target="_blank" class="social-button twitter-button">
+            <i class="fab fa-twitter"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+
+  <script>
+    function audioPlay() {
+      const audio = document.getElementById("audio");
+      audio.volume = 1.0;
+      audio.currentTime = 0;
+      audio.play();
+    }
+
+    document.addEventListener("contextmenu", e => e.preventDefault());
+    document.addEventListener("keydown", e => {
+      if (
+        (e.ctrlKey && ['u', 's', 'U', 'S'].includes(e.key)) ||
+        (e.ctrlKey && e.shiftKey && ['i', 'I'].includes(e.key)) ||
+        e.key === 'F12'
+      ) {
+        e.preventDefault();
+      }
+    });
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
