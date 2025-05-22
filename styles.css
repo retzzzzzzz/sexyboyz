@@ -252,3 +252,13 @@ body {
         width: 500px;
     }
 }
+
+@media (max-width: 768px) {
+  #bg-video {
+    display: none;
+  }
+
+  body {
+    background-color: black !important;
+  }
+}
