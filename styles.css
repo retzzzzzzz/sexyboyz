@@ -153,6 +153,15 @@ body {
     color: #1da1f2;
 }
 
+.youtube-button {
+    color: #ffffff;
+}
+
+.youtube-button:hover {
+    color: #ff0000;
+}
+
+
 /* Responsividade para mobile */
 @media (max-width: 768px) {
     .profile-card {
