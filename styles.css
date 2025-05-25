@@ -356,3 +356,13 @@ canvas#visualizer {
     }
 }
 
+@media (max-width: 768px) {
+  body {
+    overflow-y: auto; /* Habilita rolagem vertical */
+    height: auto;     /* Garante que o conteúdo não fique preso na altura da viewport */
+  }
+
+  html {
+    overflow-y: auto;
+  }
+}
