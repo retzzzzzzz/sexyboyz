@@ -338,19 +338,21 @@ canvas#visualizer {
   }
 }
 
-@media (max-width: 768px) {
-  body {
-    overflow-y: auto; /* Habilita rolagem vertical */
-    height: auto;     /* Garante que o conteúdo não fique preso na altura da viewport */
-  }
-
-  html {
-    overflow-y: auto;
-  }
-}
-
 .profile-card:hover .avatar {
     transform: scale(1.1);
     filter: brightness(1.3) contrast(1.3);
+}
+
+.username {
+    animation: glow 2s infinite ease-in-out;
+}
+
+@keyframes glow {
+    0%, 100% {
+        text-shadow: 0 0 3px #ffffff, 0 0 7px #e2ffff;
+    }
+    50% {
+        text-shadow: 0 0 15px #ffffff, 0 0 25px #e3ffff;
+    }
 }
 
