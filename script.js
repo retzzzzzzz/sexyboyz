@@ -22,6 +22,12 @@ document.addEventListener("DOMContentLoaded", () => {
             avatar: "america.png",
             banner: "bannerze.gif",
             badges: ["badge1.png", "badge2.png", "badge7.png", "badge5.png"]
+        },
+        {
+            username: "3e2",
+            avatar: "pato.png",
+            banner: "patoban.png",
+            badges: ["badge8.png", "badge7.png"]
         }
 
     ];
