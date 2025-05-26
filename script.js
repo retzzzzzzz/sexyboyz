@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
             badges: ["badge3.png", "badge2.png", "badge6.png", "badge5.png"]
         },
         {
-            username: "referenciavel",
+            username: "14z6",
             avatar: "america.png",
             banner: "bannerze.gif",
             badges: ["badge1.png", "badge2.png", "badge7.png", "badge5.png"]
